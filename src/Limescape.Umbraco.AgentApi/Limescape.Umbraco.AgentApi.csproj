@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <PackageId>Limescape.Umbraco.AgentApi</PackageId>
+    <RootNamespace>Limescape.Umbraco.AgentApi</RootNamespace>
+    <Title>Limescape Umbraco Agent API</Title>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <RepositoryUrl>https://github.com/TrueLimeNL/limescape.umbraco.agentapi</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/TrueLimeNL/limescape.umbraco.agentapi</PackageProjectUrl>
+    <Description>Generic MCP server and REST API for Umbraco 17: AI agents and apps create, describe, submit, review and archive repository materials (content items with files and metadata) on behalf of the signed-in person, with rights checked server-side.</Description>
+    <PackageTags>umbraco;umbraco-marketplace;mcp;ai-agents;rest-api;content-repository</PackageTags>
+  </PropertyGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Azure.Storage.Blobs" />
+    <PackageReference Include="Azure.Identity" Aliases="AzureIdentity" />
+    <PackageReference Include="Umbraco.Cms.Web.Common" />
+    <PackageReference Include="ModelContextProtocol.AspNetCore" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Acting user and audit: writes are attributed to the person in the user token. -->
+    <PackageReference Include="Limescape.Umbraco.Compliance" />
+  </ItemGroup>
+</Project>

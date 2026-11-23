@@ -1,0 +1,22 @@
+<Project>
+
+  <!-- Central package management. Umbraco stays on the 17 LTS line; bump UmbracoCmsVersion here only. -->
+
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <CentralPackageTransitivePinningEnabled>false</CentralPackageTransitivePinningEnabled>
+    <UmbracoCmsVersion Condition="'$(UmbracoCmsVersion)' == ''">17.7.1</UmbracoCmsVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageVersion Include="Azure.Identity" Version="1.17.1" />
+    <PackageVersion Include="Azure.Storage.Blobs" Version="12.29.1" />
+    <PackageVersion Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.12" />
+    <PackageVersion Include="Microsoft.AspNetCore.TestHost" Version="10.0.12" />
+    <PackageVersion Include="ModelContextProtocol.AspNetCore" Version="2.2.0" />
+    <PackageVersion Include="Umbraco.Cms.Web.Common" Version="$(UmbracoCmsVersion)" />
+    <PackageVersion Include="xunit.v3" Version="4.0.1" />
+    <PackageVersion Include="Limescape.Umbraco.Compliance" Version="1.0.0" />
+  </ItemGroup>
+
+</Project>

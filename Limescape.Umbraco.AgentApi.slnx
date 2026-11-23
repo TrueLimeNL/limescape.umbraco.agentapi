@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Limescape.Umbraco.AgentApi/Limescape.Umbraco.AgentApi.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Limescape.Umbraco.AgentApi.Tests/Limescape.Umbraco.AgentApi.Tests.csproj" />
+  </Folder>
+</Solution>
